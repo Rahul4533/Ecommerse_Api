@@ -4,10 +4,22 @@ const port=8080;
 
 const app= express();
 
+//Middle Ware
 
 
 
 
+
+
+
+
+
+
+
+
+const db=require('./config/mongoose');
+
+// Establish the Server
 app.listen(port,function(err){
    if(err){
     console.log('Error While Establish the server');
