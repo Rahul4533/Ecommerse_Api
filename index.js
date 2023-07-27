@@ -6,7 +6,9 @@ const app= express();
 
 //Middle Ware
 
+app.use(express.urlencoded({extended: true}));
 
+app.use(express.json());
 
 
 

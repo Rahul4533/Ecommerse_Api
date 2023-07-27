@@ -7,6 +7,8 @@ const home_controller=require('../Controller/home_controller')
 
 router.get('/',home_controller.home)
 
+router.use('/products',require('./products'));
+
 
 
 
