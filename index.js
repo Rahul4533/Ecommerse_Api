@@ -19,6 +19,8 @@ const app= express();
 
 const db=require('./config/mongoose');
 
+app.use('/',require('./Routes'));
+
 // Establish the Server
 app.listen(port,function(err){
    if(err){
