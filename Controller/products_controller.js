@@ -58,7 +58,19 @@ module.exports.update=async function(req,res){
     //Now getting the number and add the to the exist quantity into new variable
 
     const newquantity= parseInt(result.quantity)+ parseInt(req.query.number)
-    console.log(newquantity);
+   
+    // Now Find the Document by id and Update the new value init
+
+    const updatevalue= await Products.findByIdAndUpdate(Id.{
+      quantity: newquantity
+    })
+
+    res.json({
+      data:{
+        updatevalue
+      }
+    })
+
 
   } catch (error) {
     
